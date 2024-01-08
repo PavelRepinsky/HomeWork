@@ -4,18 +4,16 @@ public abstract class Parent {
 
     private String name;
 
-    //Статические блоки
     static {
         System.out.println("Parent:static 1");
     }
 
-    static {
-        System.out.println("Parent:static 2");
-    }
-
-    //Нестатические блоки
     {
         System.out.println("Parent:instance 1");
+    }
+
+    static {
+        System.out.println("Parent:static 2");
     }
 
     {

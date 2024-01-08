@@ -7,25 +7,24 @@ public class Child extends Parent{
         System.out.println("Child:static 1");
     }
 
-    static {
-        System.out.println("Child:static 2");
-    }
-
-    //Нестатические блоки
     {
         System.out.println("Child:instance 1");
     }
 
-    {
-        System.out.println("Child:instance 2");
+    static {
+        System.out.println("Child:static 2");
     }
 
-    //Конструкторы
     public Child() {
         System.out.println("Child:constructor");
     }
 
     public Child(String name) {
+        super(name);
         System.out.println("Child:name-constructor");
+    }
+
+    {
+        System.out.println("Child:instance 2");
     }
 }
