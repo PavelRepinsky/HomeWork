@@ -8,8 +8,4 @@ public class MessagesForUser {
     public static void NotMultipleOfHundredMessage() {
         System.out.println("Amount should be multiple of 100");
     }
-
-    public static void TerminalIsLockedMessage() {
-        System.out.println("Terminal is locked!");
-    }
 }
