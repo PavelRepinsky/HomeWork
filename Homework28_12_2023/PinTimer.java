@@ -12,8 +12,7 @@ public class PinTimer {
         while ((System.currentTimeMillis() - startTime) < lockTime) {
             try{
                 if (scanner.hasNextLine()) {
-                    throw new TerminalIsLockedException();}
-                else {break;}}
+                    throw new TerminalIsLockedException(" The terminal is locked. Remaining time: " + (10 - ((System.currentTimeMillis() / 1000) - startTime / 1000)) + " секунд");}}
             catch (TerminalIsLockedException e){
                 scanner.nextLine();
             }
