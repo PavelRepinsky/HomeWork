@@ -27,7 +27,12 @@ public class ParallelFactorialCalculator {
 
             executor.shutdown();
             while (!executor.isTerminated()) {
-                // Ждём пока по всем числам будет посчитан факториал
+                //Усыпляем ненадолго проверку, чтобы сильно не спамить
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
 
             scanner.close();
